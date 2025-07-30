@@ -461,6 +461,7 @@ class NonPlayableCharacter:
                                     tmp_subgroup_parameters = extract_list(tmp_database, tmp_subgroup2, '==')[0]
                                     tmp_all_active_parameters = \
                                         merge_rarity_lists(tmp_all_active_parameters, tmp_subgroup_parameters)
+                                    print(tmp_all_active_parameters)
                                 except AttributeError:
                                     # there is no subgroup with that name (legacy for '.txt' database)
                                     pass
@@ -479,6 +480,9 @@ class NonPlayableCharacter:
                         # _______________________________________
                         elif tmp_specificy <= 0:
                             tmp_all_active_parameters = extract_list(Database, tmp_active_group)[0]
+
+                tmp_all_active_parameters = [ins_parameter for ins_parameter in tmp_all_active_parameters
+                                             if ins_parameter.strip()]
 
                 # print(tmp_all_active_parameters)
                 self.select_parameter_for_groups([tmp_active_group], tmp_all_active_parameters)
