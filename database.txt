@@ -1,0 +1,133 @@
+## last edit: 3.3.2024.
+## cod version compatible: v.0.0.1
+------------------------------------------------------------------------------------------------------------------------
+
+__Name__
+Vanja
+Matija
+Zoran
+Ana
+Traktorka
+Zdeslav
+Pashko
+Pipi
+Dragica
+Milka
+Karlo
+Bob
+Ashley
+Quartzol
+Dolly
+Dado
+Karen
+Dick
+Nanoo
+Obonto
+Siri
+Pear
+Mr. Snuggles
+Faun
+Deedee
+Dexter
+Lolli
+Silvana
+Vladimir
+Coral
+Frodo
+Alisa
+Brooni
+/end
+------------------------------------------------------------------------------------------------------------------------
+
+__Sex__
+Male
+Female
+NonBinary(R)
+/end
+------------------------------------------------------------------------------------------------------------------------
+
+__Race__
+Dwarf
+Elf
+Gnome
+Halfling
+Human
+Azarketi(U)
+Catfolk(U)
+Fatchling(U)
+Gnoll(U)
+Grippli(U)
+Hobgoblin(U)
+Kitsune(U)
+Kobold(U)
+Leshy(U)
+Lizardfolk(U)
+Nagaji(U)
+Orc(U)
+Ratfolk(U)
+Tengu(U)
+Vanara(U)
+Anadi(R)
+Android(R)
+Automaton(R)
+Conrasu(R)
+Fleshwrap(R)
+Ghoran(R)
+Goloma(R)
+Kashrishi(R)
+Poppet(R)
+Shisk(R)
+Shoony(R)
+Skeleton(R)
+Sprite(R)
+Strix(R)
+Vishkanya(R)
+/end
+------------------------------------------------------------------------------------------------------------------------
+
+__Characteristics__
+Likes to wear dresses
+fears rats
+loves to walk around at night
+insane
+funny
+loves their job
+hates their job
+has big family
+has a harem
+has too many pets
+acts like a child
+brave
+cowardly
+adores their grandma
+loves hentai
+obsessed with sex
+racist
+/end
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+## ConditionedGroup ----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
+==MaleName==
+Ivan
+Vanja
+/end
+------------------------------------------------------------------------------------------------------------------------
+
+==AndroidSex==
+Male(1)
+Female(1)
+NonBinary
+/end
+------------------------------------------------------------------------------------------------------------------------
+
+==AutomatonSex==
+Male(1)
+Female(1)
+NonBinary
+/end
+------------------------------------------------------------------------------------------------------------------------
