@@ -112,7 +112,7 @@ def extract_list(inp_data, group_name, delimiter='__'):
     # _______________________________________
     else:
         raise TypeError(f'Type of {inp_data} not possible to compile')
-        
+
     out_data_list = [ins_element for ins_element in out_data_list if ins_element.strip()]
     out_list_length = len(out_data_list)
 
@@ -636,7 +636,8 @@ if __name__ == '__main__':
                  'Description': 'list data from database',
                  'Help': 'Additional functions for \'list\':\n'
                          '--\'GroupName\'\t- list all parameters of certain group\n'
-                         '->\'GroupName\'\t- list all sub groups of certain group'
+                         '->\'GroupName\'\t- list all sub groups of certain group\n'
+                         '--\'GroupName\'>\'SubGroupName\'\t- list all parameters of subgroup'
                  },
 
         'help': {'ControlList': ['help', 'h'],
@@ -730,10 +731,21 @@ if __name__ == '__main__':
                     # list parameters in group
                     if Control[1].startswith('-'):
                         Group = Control[1][1:]
-                        try:
+                        try:    # first check if group is in database
                             PrintList = extract_list(Database, Group)[0]
                         except KeyError:
                             pass
+                        if not PrintList:   # if there was no group found in database check is it a path
+                            Group = Group.split('>')
+                            try:    # try path to find list
+                                PrintList = extract_list(load_files(f'{global_database_path}/{Group[0]}'), Group[1])[0]
+                            except KeyError:
+                                try:    # replace space with dash and try again to find a list
+                                    print(Group[1].replace(' ', '_'))
+                                    PrintList = extract_list(load_files(f'{global_database_path}'
+                                                                        f'/{Group[0]}'), Group[1].replace(' ', '_'))[0]
+                                except KeyError:
+                                    pass
                     # list subgroups
                     elif Control[1].startswith('>'):
                         SubGroup = Control[1][1:]
