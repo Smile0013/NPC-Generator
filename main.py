@@ -112,7 +112,8 @@ def extract_list(inp_data, group_name, delimiter='__'):
     # _______________________________________
     else:
         raise TypeError(f'Type of {inp_data} not possible to compile')
-
+        
+    out_data_list = [ins_element for ins_element in out_data_list if ins_element.strip()]
     out_list_length = len(out_data_list)
 
     # debug print output
@@ -461,7 +462,6 @@ class NonPlayableCharacter:
                                     tmp_subgroup_parameters = extract_list(tmp_database, tmp_subgroup2, '==')[0]
                                     tmp_all_active_parameters = \
                                         merge_rarity_lists(tmp_all_active_parameters, tmp_subgroup_parameters)
-                                    print(tmp_all_active_parameters)
                                 except AttributeError:
                                     # there is no subgroup with that name (legacy for '.txt' database)
                                     pass
